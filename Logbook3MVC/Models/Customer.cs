@@ -6,10 +6,13 @@ namespace Logbook3MVC.Models
     {
         public int Id { get; set; }
 
-        [Required, ]
+        [Required, StringLength(20)]
         public string Name { get; set; } =  String.Empty;
 
+        [Required, StringLength(20), DataType(DataType.EmailAddress)]
+
         public string Email { get; set; } = String.Empty;
+        [StringLength(20), DataType(DataType.PhoneNumber)]
 
         public string? PhoneNumber { get; set; } = null;
     }
